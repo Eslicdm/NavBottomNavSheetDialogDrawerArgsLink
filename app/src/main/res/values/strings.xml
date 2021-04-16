@@ -5,4 +5,7 @@
     <string name="previous">previous</string>
     <string name="second_fragment">Second Fragment</string>
     <string name="third_fragment">Third Fragment</string>
+    <string name="bottom_sheet">bottom sheet</string>
+    <string name="share">share</string>
+    <string name="settings">settings</string>
 </resources>
