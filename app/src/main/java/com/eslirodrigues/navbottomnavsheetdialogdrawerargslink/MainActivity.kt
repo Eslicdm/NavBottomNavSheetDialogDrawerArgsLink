@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.fragmentHost)
 
         binding.drawerView.setupWithNavController(navController)
+        binding.bottomNavigationView.setupWithNavController(navController)
 
+        // can use setOf(id)
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
 
         setupActionBarWithNavController(navController, appBarConfiguration)
