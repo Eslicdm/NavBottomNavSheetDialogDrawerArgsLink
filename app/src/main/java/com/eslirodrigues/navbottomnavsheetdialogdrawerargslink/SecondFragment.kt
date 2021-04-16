@@ -25,8 +25,14 @@ class SecondFragment : Fragment() {
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
 
         val rate = args.rate
+        val deepLinkUser = args.username
 
-        binding.editTextSecond.setText(rate)
+        if (rate != null) {
+            binding.editTextSecond.setText(rate)
+        }
+        if (deepLinkUser != null) {
+            binding.editTextSecond.setText(deepLinkUser)
+        }
 
         binding.buttonPreviousSecond.setOnClickListener {
             findNavController().navigate(R.id.action_secondFragment_to_firstFragment)
