@@ -25,6 +25,10 @@ class ThirdFragment : Fragment() {
             findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
         }
 
+        binding.buttonDialogThird.setOnClickListener {
+            findNavController().navigate(R.id.action_thirdFragment_to_customDialogFragment)
+        }
+
         return binding.root
     }
 

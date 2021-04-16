@@ -36,6 +36,11 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="rate"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -48,9 +53,21 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_thirdFragment_to_customDialogFragment"
+            app:destination="@id/customDialogFragment" />
     </fragment>
     <dialog
         android:id="@+id/bottomSheetFragment"
         android:name="com.eslirodrigues.navbottomnavsheetdialogdrawerargslink.BottomSheetFragment"
         android:label="BottomSheetFragment" />
+    <dialog
+        android:id="@+id/customDialogFragment"
+        android:name="com.eslirodrigues.navbottomnavsheetdialogdrawerargslink.CustomDialogFragment"
+        android:label="CustomDialogFragment" >
+        <action
+            android:id="@+id/action_customDialogFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/slide_in_left" />
+    </dialog>
 </navigation>

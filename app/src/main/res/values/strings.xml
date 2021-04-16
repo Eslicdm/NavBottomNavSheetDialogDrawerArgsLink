@@ -8,4 +8,9 @@
     <string name="bottom_sheet">bottom sheet</string>
     <string name="share">share</string>
     <string name="settings">settings</string>
+    <string name="cancel">cancel</string>
+    <string name="submit">submit</string>
+    <string name="rate">RATE</string>
+    <string name="open_dialog">open dialog</string>
+    <string name="write_here">Write Here</string>
 </resources>
