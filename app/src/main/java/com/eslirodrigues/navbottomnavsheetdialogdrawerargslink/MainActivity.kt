@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import com.eslirodrigues.navbottomnavsheetdialogdrawerargslink.databinding.ActivityMainBinding
 
@@ -20,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navController = findNavController(R.id.fragmentHost)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentHost) as NavHostFragment
+        navController = navHostFragment.navController
 
         binding.drawerView.setupWithNavController(navController)
         binding.bottomNavigationView.setupWithNavController(navController)
