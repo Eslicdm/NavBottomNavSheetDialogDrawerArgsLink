@@ -26,7 +26,7 @@ class CustomDialogFragment : DialogFragment() {
 
             val ratingResult = radio.text.toString()
 
-            findNavController().navigate(CustomDialogFragmentDirections.actionCustomDialogFragmentToSecondFragment(ratingResult))
+            findNavController().navigate(CustomDialogFragmentDirections.actionCustomDialogFragmentToSecondFragment(rate = ratingResult))
 
             dismiss()
         }
