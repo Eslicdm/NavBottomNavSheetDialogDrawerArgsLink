@@ -24,9 +24,10 @@ class CustomDialogFragment : DialogFragment() {
             val selectId = binding.radioGroupRate.checkedRadioButtonId
             val radio = binding.root.findViewById<RadioButton>(selectId)
 
-            val ratingResult = radio.text.toString()
-
-            findNavController().navigate(CustomDialogFragmentDirections.actionCustomDialogFragmentToSecondFragment(rate = ratingResult))
+            if (radio != null) {
+                val ratingResult = radio.text.toString()
+                findNavController().navigate(CustomDialogFragmentDirections.actionCustomDialogFragmentToSecondFragment(rate = ratingResult))
+            }
 
             dismiss()
         }
