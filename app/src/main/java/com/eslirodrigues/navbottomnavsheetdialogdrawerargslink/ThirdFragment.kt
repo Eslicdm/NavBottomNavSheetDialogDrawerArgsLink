@@ -9,17 +9,12 @@ import androidx.navigation.fragment.findNavController
 import com.eslirodrigues.navbottomnavsheetdialogdrawerargslink.databinding.FragmentFirstBinding
 import com.eslirodrigues.navbottomnavsheetdialogdrawerargslink.databinding.FragmentThirdBinding
 
-class ThirdFragment : Fragment() {
+class ThirdFragment : Fragment(R.layout.fragment_third) {
 
-    private var _binding: FragmentThirdBinding? = null
-    private val binding get() = _binding!!
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentThirdBinding.inflate(inflater, container, false)
+        val binding = FragmentThirdBinding.bind(view)
 
         binding.buttonPreviousThird.setOnClickListener {
             findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
@@ -28,12 +23,5 @@ class ThirdFragment : Fragment() {
         binding.buttonDialogThird.setOnClickListener {
             findNavController().navigate(R.id.action_thirdFragment_to_customDialogFragment)
         }
-
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
